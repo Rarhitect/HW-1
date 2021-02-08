@@ -29,11 +29,15 @@ int main()
 
     auto v_1 = v;
     auto v_2 = v;
-
+    
+//start1
     sort(v_1);
-
+//finish1
+    
+//start2
     std::sort(v_2.begin(), v_2.end());
-
+//finish2
+    
     system("pause");
 
     return EXIT_SUCCESS;
