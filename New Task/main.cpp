@@ -3,6 +3,7 @@
 int main()
 {
     std::cout << "CONFLICT" << std::endl;
+    //fix the err
     int a = 77;
     std::cout << a-66 << std::endl;
     std::cout << "I hate this git-staff" << std::endl;
