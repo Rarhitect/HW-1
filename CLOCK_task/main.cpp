@@ -39,8 +39,8 @@ int main()
     auto begin2 = std::chrono::steady_clock::now();
     std::sort(v_2.begin(), v_2.end());
     auto end2 = std::chrono::steady_clock::now();
-    auto elapsed2 = std::chrono::duration_cast<std::chrono::milliseconds>(end2 - begin2);
-    std::cout << "The second time: " << elapsed2.count() << " ms" << std::endl;
+    auto elapsed2 = std::chrono::duration_cast<std::chrono::nanoseconds>(end2 - begin2);
+    std::cout << "The second time: " << elapsed2.count() << " ns" << std::endl;
 
     system("pause");
     
