@@ -29,16 +29,20 @@ int main()
 
     auto v_1 = v;
     auto v_2 = v;
-    
-//start1
-    sort(v_1);
-//finish1
-    
-//start2
-    std::sort(v_2.begin(), v_2.end());
-//finish2
-    
-    system("pause");
 
-    return EXIT_SUCCESS;
+    auto begin1 = std::chrono::steady_clock::now();
+    sort(v_1);
+    auto end1 = std::chrono::steady_clock::now();
+    auto elapsed1 = std::chrono::duration_cast<std::chrono::milliseconds>(end1 - begin1);
+    std::cout << "The first time: " << elapsed1.count() << " ms" << std::endl;
+
+    auto begin2 = std::chrono::steady_clock::now();
+    std::sort(v_2.begin(), v_2.end());
+    auto end2 = std::chrono::steady_clock::now();
+    auto elapsed2 = std::chrono::duration_cast<std::chrono::milliseconds>(end2 - begin2);
+    std::cout << "The second time: " << elapsed2.count() << " ms" << std::endl;
+
+    system("pause");
+    
+    return 0;
 }
